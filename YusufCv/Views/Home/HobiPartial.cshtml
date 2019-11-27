@@ -1,0 +1,15 @@
+﻿@model IEnumerable<YusufCv.Models.Hobiler>
+
+@{
+    Layout = null;
+}
+
+<h2 class="container-block-title">Hobiler</h2>
+@foreach (var item in Model)
+{
+<ul class="list-unstyled interests-list">
+    <li>@item.Aciklama</li>
+ 
+</ul>
+}
+

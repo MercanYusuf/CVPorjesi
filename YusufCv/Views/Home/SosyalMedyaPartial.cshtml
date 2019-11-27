@@ -1,0 +1,15 @@
+﻿@using YusufCv.Models.Entity
+@model YusufCv.Models.SosyalMedya
+
+@{
+    Layout = null;
+}
+
+
+<ul class="list-unstyled contact-list">
+    <li class="email"><i class="fas fa-envelope"></i><a href="mailto: yourname@email.com">@Model.Email</a></li>
+    <li class="phone"><i class="fas fa-phone"></i><a href="tel:0536 457 31 34">@Model.Telefon</a></li>
+    <li class="linkedin"><i class="fab fa-linkedin-in"></i><a href="#" target="_blank">@Model.Linked</a></li>
+    <li class="github"><i class="fab fa-github"></i><a href="#" target="_blank">@Model.GitHub</a></li>
+    <li class="twitter"><i class="fab fa-twitter"></i><a href="https://twitter.com/yusuffmercan" target="_blank">@Model.Twitter</a></li>
+</ul>

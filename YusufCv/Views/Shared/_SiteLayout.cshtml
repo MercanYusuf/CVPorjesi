@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yusuf Mercan CV</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Resume/CV Template for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/Content/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="/Content/assets/css/orbit-1.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar-wrapper">
+            @{Html.RenderAction("KimlikPartial", "Home");}
+
+            <div class="contact-container container-block">
+                @{Html.RenderAction("SosyalMedyaPartial", "Home");}
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                @{Html.RenderAction("EgitimPartial", "Home");}
+            </div><!--//education-container-->
+   
+
+            <div class="interests-container container-block">
+                @{Html.RenderAction("HobiPartial", "Home");}
+            </div><!--//interests-->
+
+        </div><!--//sidebar-wrapper-->
+
+        <div class="main-wrapper">
+            @RenderBody()
+       
+
+        </div><!--//main-body-->
+    </div>
+
+    <footer class="footer">
+        <div class="text-center">
+      
+            <small class="copyright">Designed By   <a href="#" target="_blank">Yusuf Mercan</a></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+</body>
+</html>

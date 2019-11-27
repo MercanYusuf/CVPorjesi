@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body class="">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <!--
+                Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+            -->
+            <div class="logo">
+                <a href="/Admin/Index" class="simple-text logo-mini">
+                    <div class="logo-image-small">
+                        <img src="/Content/AdminTemplate/assets/img/logo-small.png">
+                    </div>
+                </a>
+                <a href="/Admin/Index" class="simple-text logo-normal">
+                    Yusuf Mercan
+                    <!-- <div class="logo-image-big">
+                      <img src="../assets/img/logo-big.png">
+                    </div> -->
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="active ">
+                        <a href="/Admin/Index/">
+                            <i class="nc-icon nc-bank"></i>
+                            <p>Admin Paneli</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Hakkimdas/Index/">
+                            <i class="nc-icon nc-diamond"></i>
+                            <p>Hakkımızda</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Deneyimlers/Index/">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p>Deneyimler</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Projes/Index/">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>Proje</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Hobilers/Index/">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>Hobiler</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/SosyalMedyas/Index/">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>Sosyal Medya</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Egitims/Index/">
+                            <i class="nc-icon nc-tile-56"></i>
+                            <p>Eğitim</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Kimliks/Index">
+                            <i class="nc-icon nc-caps-small"></i>
+                            <p>Kimlik</p>
+                        </a>
+                    </li>
+                 
+                </ul>
+            </div>
+        </div>
+     
+    </div>
+    <!--   Core JS Files   -->
+    <script src="/Content/AdminTemplate/assets/js/core/jquery.min.js"></script>
+    <script src="/Content/AdminTemplate/assets/js/core/popper.min.js"></script>
+    <script src="/Content/AdminTemplate/assets/js/core/bootstrap.min.js"></script>
+    <script src="/Content/AdminTemplate/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!-- Chart JS -->
+    <script src="/Content/AdminTemplate/assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="/Content/AdminTemplate/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="/Content/AdminTemplate/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+    <script src="/Content/AdminTemplate/assets/demo/demo.js"></script>
+    <script>$(document).ready(function() {
+      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      demo.initChartsPages();
+    });</script>
+</body>
+</html>
+
+

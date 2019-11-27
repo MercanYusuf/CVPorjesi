@@ -1,0 +1,66 @@
+﻿@model YusufCv.Models.Deneyimler
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<div>
+   
+   
+    <dl class="dl-horizontal">
+        <br /><br /><br /><br />
+        <dt>
+            @Html.DisplayNameFor(model => model.DeneyimAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeneyimAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeneyimAciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeneyimAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sertifika)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sertifika)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SertifikaAciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SertifikaAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Geri Dön", "Index",null,new{@class="btn btn-primary"})
+        </div>
+    }
+</div>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<YusufCv.Models.Hakkimda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+<table class="table table-bordered table-striped table-responsive-sm">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.Raw(@item.Aciklama)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Edit", new { id = item.HakkimdaId }, new { @class = "btn btn-warning" }) |
+
+                @Html.ActionLink("Sil", "Delete", new { id = item.HakkimdaId }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

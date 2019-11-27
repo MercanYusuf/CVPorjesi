@@ -1,0 +1,16 @@
+﻿@model IEnumerable<YusufCv.Models.Egitim>
+
+@{
+    Layout = null;
+}
+
+<h2 class="container-block-title">Eğitim</h2>
+@foreach (var item in Model)
+{
+    <div class="item">
+        <h4 class="degree">@item.Baslik</h4>
+        <h5 class="meta">@Html.Raw(item.Aciklama)</h5>
+       
+    </div><!--//item-->
+}
+

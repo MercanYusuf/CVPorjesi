@@ -1,0 +1,167 @@
+﻿@{
+    if (Session["adminid"] == null)
+    {
+        Response.Redirect("/Admin/Login");
+    }
+}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/Content/AdminTemplate/assets/img/apple-icon.png">
+        <link rel="icon" type="image/png" href="/Content/AdminTemplate/assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>
+            Yusuf Mercan CV Admin Panel
+        </title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+        <!--     Fonts and icons     -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+        <!-- CSS Files -->
+        <link href="/Content/AdminTemplate/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/Content/AdminTemplate/assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+        <!-- CSS Just for demo purpose, don't include it in your project -->
+        <link href="/Content/AdminTemplate/assets/demo/demo.css" rel="stylesheet" />
+        <script src="~/Content/ckeditor_4.12.1_full/ckeditor/ckeditor.js"></script>
+        <link href="~/Content/ckeditor_4.12.1_full/ckeditor/contents.css" rel="stylesheet" />
+    </head>
+    <body class="">
+        <div class="wrapper ">
+            <div class="sidebar" data-color="white" data-active-color="danger">
+               
+                <div class="logo">
+                    <a href="/Admin/Index" class="simple-text logo-mini">
+                        <div class="logo-image-small">
+                            <img src="/Content/AdminTemplate/assets/img/logo-small.png">
+                        </div>
+                    </a>
+                    <a href="/Admin/Index" class="simple-text logo-normal">
+                        Yusuf Mercan
+                      
+                    </a>
+                </div>
+                <div class="sidebar-wrapper">
+                    <ul class="nav">
+                        <li class="active ">
+                            <a href="/Admin/Index/">
+                                <i class="nc-icon nc-bank"></i>
+                                <p>Admin Paneli</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Hakkimdas/Index/">
+                                <i class="nc-icon nc-diamond"></i>
+                                <p>Hakkımızda</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Deneyimlers/Index/">
+                                <i class="nc-icon nc-pin-3"></i>
+                                <p>Deneyimler</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Projes/Index/">
+                                <i class="nc-icon nc-controller-modern"></i>
+                                <p>Proje</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Hobilers/Index/">
+                                <i class="nc-icon nc-bell-55"></i>
+                                <p>Hobiler</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/SosyalMedyas/Index/">
+                                <i class="nc-icon nc-single-02"></i>
+                                <p>Sosyal Medya</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Egitims/Index/">
+                                <i class="nc-icon nc-tile-56"></i>
+                                <p>Eğitim</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Kimliks/Index">
+                                <i class="nc-icon nc-caps-small"></i>
+                                <p>Kimlik</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-toggle">
+                                <button type="button" class="navbar-toggler">
+                                    <span class="navbar-toggler-bar bar1"></span>
+                                    <span class="navbar-toggler-bar bar2"></span>
+                                    <span class="navbar-toggler-bar bar3"></span>
+                                </button>
+                            </div>
+                            <a class="navbar-brand" href="#pablo">Admin Paneli - Yusuf Mercan CV Sitesi Admin Paneli</a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+
+                            <ul class="navbar-nav">
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn-rotate" href="#">
+                                      
+                                        <p>
+                                            <span class="username" style="font-style: oblique;">@Session["eposta"]</span>
+                                        </p>
+                                       
+                                    </a>
+                                </li>
+                            </ul>
+                            <p>
+                                <a href="/Admin/Logout"><i class="icon_key_alt"></i> Çıkış Yap</a>
+                            </p>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+
+                @RenderBody()
+
+            </div>
+        </div>
+        <!--   Core JS Files   -->
+        <script src="/Content/AdminTemplate/assets/js/core/jquery.min.js"></script>
+        <script src="/Content/AdminTemplate/assets/js/core/popper.min.js"></script>
+        <script src="/Content/AdminTemplate/assets/js/core/bootstrap.min.js"></script>
+        <script src="/Content/AdminTemplate/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <!--  Google Maps Plugin    -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+        <!-- Chart JS -->
+        <script src="/Content/AdminTemplate/assets/js/plugins/chartjs.min.js"></script>
+        <!--  Notifications Plugin    -->
+        <script src="/Content/AdminTemplate/assets/js/plugins/bootstrap-notify.js"></script>
+        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="/Content/AdminTemplate/assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+        <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+        <script src="/Content/AdminTemplate/assets/demo/demo.js"></script>
+        <script>
+    $(document).ready(function () {
+                // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+                demo.initChartsPages();
+            });</script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<YusufCv.Models.Deneyimler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<script type="text/javascript">
+    CKEDITOR.replace("editor")
+</script>
+
+
+<p>
+    @Html.ActionLink("Yeni Ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-bordered table-striped table-responsive-sm">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DeneyimAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeneyimAciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sertifika)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SertifikaAciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.Raw(item.DeneyimAd)
+            </td>
+            <td>
+                @Html.Raw(item.DeneyimAciklama)
+            </td>
+            <td>
+                @Html.Raw(item.Sertifika)
+            </td>
+            <td>
+                @Html.Raw(item.SertifikaAciklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tarih)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Edit", new { id = item.DeneyimId }, new { @class = "btn btn-warning" }) |
+
+                @Html.ActionLink("Sil", "Delete", new { id = item.DeneyimId }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

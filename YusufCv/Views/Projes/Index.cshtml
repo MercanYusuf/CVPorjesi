@@ -1,0 +1,35 @@
+﻿@model IEnumerable<YusufCv.Models.Proje>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br /><br /><br /><br />
+<p>
+    @Html.ActionLink("Yeni Ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-bordered table-striped table-responsive-sm">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.Raw(item.Aciklama)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Edit", new { id = item.ProjeId }, new { @class = "btn btn-warning" }) |
+
+                @Html.ActionLink("Sil", "Delete", new { id = item.ProjeId }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model YusufCv.Models.Hakkimda
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<script type="text/javascript">
+    CKEDITOR.replace("editor")
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <br />
+        <br />
+        <br />
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.HakkimdaId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Aciklama, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               <textarea name="Aciklama" class="ckeditor">@Model.Aciklama</textarea>
+                @Html.ValidationMessageFor(model => model.Aciklama, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Güncelle" class="btn btn-warning" />
+            </div>
+        </div>
+    </div>
+}
+
+<div style="margin-left:15px;">
+    @Html.ActionLink("Geri Dön", "Index",null,new{@class="btn btn-primary"})
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<YusufCv.Models.Deneyimler>
+
+@{
+    Layout = null;
+}
+
+<section class="section experiences-section">
+    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Deneyim Sertifikalar Kurslar</h2>
+    @foreach (var item in Model)
+    {
+        <div class="item">
+            <div class="meta">
+                <div class="upper-row">
+                    <h3 class="job-title">@Html.Raw(item.DeneyimAd)</h3>
+                   
+                </div><!--//upper-row-->
+               
+            </div><!--//meta-->
+            <div class="details">
+               
+                <p>@Html.Raw(item.DeneyimAciklama) </p>
+                <div class="upper-row">
+                    <h3 class="job-title">@Html.Raw(item.Sertifika)</h3>
+                    @*<div class="time">@item.Tarih</div>*@
+                    <p>@Html.Raw(item.SertifikaAciklama)</p>
+                </div><!--//upper-row-->
+            </div><!--//details-->
+        </div><!--//item-->
+    }
+
+
+
+</section>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<YusufCv.Models.Proje>
+
+@{
+    Layout = null;
+}
+<section class="section projects-section">
+    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-archive"></i></span>Projeler</h2>
+    @foreach (var item in Model)
+    {
+        <div class="intro">
+            <p>@Html.Raw(item.Aciklama)</p>
+        </div><!--//intro-->
+    }
+
+
+
+</section>

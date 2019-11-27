@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+
+<section class="section summary-section">
+    @{Html.RenderAction("HakkimdaPartial", "Home");}
+</section><!--//section-->
+
+
+<section class="section experiences-section">
+    @{Html.RenderAction("DeneyimPartial", "Home");}
+</section>
+
+<section class="section projects-section">
+    @{Html.RenderAction("ProjePartial", "Home");}
+</section>
+
+
+
+<section class="skills-section section">
+    <h2 class="section-title"><span class="icon-holder"><i class="fas fa-rocket"></i></span>Yetenekler &amp; Programlama Dilleri</h2>
+    <div class="skillset">
+        <div class="item">
+            <h3 class="level-title">C# &amp; .NET MVC</h3>
+            <div class="progress level-bar">
+                <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 65%" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div><!--//item-->
+        <div class="item">
+            <h3 class="level-title">OOP (Nesne Yönelimli Programlama)</h3>
+            <div class="progress level-bar">
+                <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 70%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div><!--//item-->
+
+        <div class="item">
+            <h5 class="level-title">JAVASCRİPT</h5>
+            <div class="progress level-bar">
+                <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 60%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div><!--//item-->
+
+        <div class="item">
+            <h3 class="level-title">SQL</h3>
+            <div class="progress level-bar">
+                <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 70%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div><!--//item-->
+
+        <div class="item">
+            <h3 class="level-title">HTML5 &amp; CSS &amp; Bootstrap</h3>
+            <div class="progress level-bar">
+                <div class="progress-bar theme-progress-bar" role="progressbar" style="width: 80%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div><!--//item-->
+
+
+    </div>
+</div>
+</section>

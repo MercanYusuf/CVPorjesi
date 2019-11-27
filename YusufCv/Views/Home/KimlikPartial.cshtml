@@ -1,0 +1,11 @@
+﻿@using YusufCv.Models.Entity
+@model YusufCv.Models.Kimlik
+@{
+    Layout = null;
+}
+
+<div class="profile-container" >
+    <img style="border-radius: 50%; overflow: hidden; width: 150px; height: 140px;" class="profile" src="@Model.ResimURL" alt="" />
+    <h1 class="name">@Html.Raw(Model.Ad+" "+Model.Soyad) </h1>
+    <h3 class="tagline">@Model.Unvan</h3>
+</div>
